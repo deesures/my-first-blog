@@ -7,11 +7,13 @@
     <h1><a href = "/">Django Girls Blog</a></h1>
   </div>
 
-  <div>
-    <p>Published: 03.11.2020, 2:30</p>
-    <h2><a href = "">My first post</a></h2>
-    <p>Professionnel de l'analyse de données avec 3 ans d'expériences dans les secteurs du transport maritime, aérien et du conseil. Maîtrise des langages de programmation tels que R, Python et MySQL. Travailleur acharné, enthousiaste avec l'esprit analytique et proactif.</p>
-  </div>
-  
+  {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
+
 </body>
 </html>
