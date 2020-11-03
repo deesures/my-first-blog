@@ -1,9 +1,7 @@
 from django.db import models
 from django.conf import settings
 from django.utils import timezone
-from django.views.decorators.csrf import csrf_exempt
 
-@csrf_exempt
 
 # Create your models here.
 
